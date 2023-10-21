@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Menghitung Luas Persegi Panjang</title>
+</head>
+<body>
+    <h1>Menghitung Luas Persegi Panjang</h1>
+    
+    <p>Menggunakan rumus mencari luas persegi panjang dengan = P * L</p>
+    <label for="panjang">Panjang:</label>
+    <input type="number" id="panjang">
+    
+    <label for="lebar">Lebar:</label>
+    <input type="number" id="lebar">
+    
+    <button onclick="hitungLuas()">Hasil</button>
+    
+    <p id="hasilLuas"></p>
+
+    <h1>Pemeriksaan Angka</h1>
+    
+    <label for="angka">Misal nilai x:</label>
+    <input type="number" id="angka">
+    
+    <button onclick="cekAngka()">Hasil</button>
+    
+    <p id="hasilCekAngka"></p>
+
+    <script>
+        function hitungLuas() {
+          
+            var panjang = parseFloat(document.getElementById("panjang").value);
+            var lebar = parseFloat(document.getElementById("lebar").value);
+
+          
+            var luas = panjang * lebar;
+
+           
+            document.getElementById("hasilLuas").innerHTML = " Maka luas persegi panjang yaitu " + luas;
+        }
+
+        function cekAngka() {
+           
+            var angka = parseFloat(document.getElementById("angka").value);
+
+           
+            if (angka > 0) {
+                document.getElementById("hasilCekAngka").innerHTML = "Angka adalah positif";
+            } else if (angka < 0) {
+                document.getElementById("hasilCekAngka").innerHTML = "Angka adalah negatif";
+            } else {
+                document.getElementById("hasilCekAngka").innerHTML = "Angka adalah nol";
+            }
+        }
+    </script>
+</body>
+</html>
