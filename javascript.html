@@ -2,6 +2,8 @@
 <html>
 <head>
     <title>Menghitung Luas Persegi Panjang</title>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
     <h1>Menghitung Luas Persegi Panjang</h1>
@@ -13,7 +15,7 @@
     <label for="lebar">Lebar:</label>
     <input type="number" id="lebar">
     
-    <button onclick="hitungLuas()">Hasil</button>
+    <button onclick="hitungLuas()" class="btn btn-primary">Hasil</button>
     
     <p id="hasilLuas"></p>
 
@@ -22,28 +24,25 @@
     <label for="angka">Misal nilai x:</label>
     <input type="number" id="angka">
     
-    <button onclick="cekAngka()">Hasil</button>
+    <button onclick="cekAngka()" class="btn btn-primary">Hasil</button>
     
     <p id="hasilCekAngka"></p>
 
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
     <script>
         function hitungLuas() {
-          
             var panjang = parseFloat(document.getElementById("panjang").value);
             var lebar = parseFloat(document.getElementById("lebar").value);
-
-          
             var luas = panjang * lebar;
-
-           
             document.getElementById("hasilLuas").innerHTML = " Maka luas persegi panjang yaitu " + luas;
         }
 
         function cekAngka() {
-           
             var angka = parseFloat(document.getElementById("angka").value);
-
-           
             if (angka > 0) {
                 document.getElementById("hasilCekAngka").innerHTML = "Angka adalah positif";
             } else if (angka < 0) {
