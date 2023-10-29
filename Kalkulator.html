@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kalkulator Sederhana</title>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container">
+    <h2 class="mt-4">Kalkulator Sederhana</h2>
+    
+    <div class="form-group">
+        <input type="text" class="form-control" id="num1" placeholder="Bilangan pertama">
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" id="num2" placeholder="Bilangan kedua">
+    </div>
+
+    <button class="btn btn-primary" onclick="tambah()">+</button>
+    <button class="btn btn-primary" onclick="kurang()">-</button> 
+    <button class="btn btn-primary" onclick="kali()">*</button> 
+    <button class="btn btn-primary" onclick="bagi()">/</button> 
+
+    <div class="form-group mt-3">
+        <label>Hasil:</label>
+        <input type="text" class="form-control" id="result" readonly>
+    </div>
+</div>
+
+<script>
+function tambah() {
+  var num1 = parseInt(document.getElementById('num1').value);
+  var num2 = parseInt(document.getElementById('num2').value);
+  document.getElementById('result').value = num1 + num2;
+}
+
+function kurang() {
+  var num1 = parseInt(document.getElementById('num1').value);
+  var num2 = parseInt(document.getElementById('num2').value);
+  document.getElementById('result').value = num1 - num2;
+}
+
+function kali() {
+  var num1 = parseInt(document.getElementById('num1').value);
+  var num2 = parseInt(document.getElementById('num2').value);
+  document.getElementById('result').value = num1 * num2;
+}
+
+function bagi() {
+  var num1 = parseInt(document.getElementById('num1').value);
+  var num2 = parseInt(document.getElementById('num2').value);
+  document.getElementById('result').value = num1 / num2;
+}
+</script>
+
+
+</body>
+</html>
